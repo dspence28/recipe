@@ -1,1 +1,252 @@
-FONTS= https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Lato:wght@400;700&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Seymour+One&display=swap');
+
+/*-------------------- CSS RESET --------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* -------------------- ROOT VARIABLES  -------------------- */
+:root {
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    --black:#0D0D0D;
+    --white: #F2F2F2;
+    --blue: #7ABFBF;
+    --teal: rgba(122, 191, 191, .5); 
+    --orange:#EB5428;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+body {
+    max-width:414px;
+    background-color:var(--teal);
+    font-family:"Montserrat";
+}
+
+h1{
+    font-size:40px;
+    color:var(--black);
+    font-family:"Bebas Neue";
+    text-align: center;
+    margin-top: 50px;
+}
+
+header{
+    background-color: var(--white);
+    margin: auto;
+    padding-top: 50px;
+    
+}
+header img{
+    width:414px;
+}
+header p {
+    padding:10px;
+    line-height: normal;
+    position: relative;
+}
+
+menu {
+    display: flex;
+    list-style: none;
+    justify-items: auto;
+    padding: 10px;
+}
+
+menu li {
+    color:#EB5428;
+    font-family:"Bebas Neue";
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    padding:5px;
+}
+
+menu a {
+    color:#EB5428;
+    text-decoration: none;
+}
+
+
+nav h2 {
+    visibility:hidden;
+}
+
+nav li {
+    visibility: hidden;
+}
+
+form {
+    position: absolute;
+    top: 0%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--white);
+    width:414px;
+    padding-bottom:15px;
+    text-align: center;
+}
+
+#details {
+    background-color: var(--white);
+}
+#details dl {
+    display: flex;
+    padding:10px;
+    
+}
+
+#details h2 {
+    text-align: center;
+    font-family:"Bebas Neue";
+    font-size:30px;
+    padding:10px;
+}
+
+#details dt {
+    font-family:"Montserrat";
+    font-size:16px;
+    font-weight:700;
+}
+
+#details dd {
+    font-family:"Montserrat";
+    font-size:16px;
+    font-weight:400;
+    padding-left: 10px;
+}
+
+#ingredients {
+    background-color: var(--white);
+}
+#ingredients h2 {
+    text-align: center;
+    font-family:"Bebas Neue";
+    font-size:30px;
+    padding:10px;
+}
+
+#ingredients ul {
+    margin-left:20px;
+}
+#ingredients li {
+    visibility: visible;
+    list-style-type: square;
+    padding:5px;
+}
+
+#directions {
+    background-color: var(--white);
+}
+
+#directions h2 {
+    text-align: center;
+    font-family:"Bebas Neue";
+    font-size:30px;
+    padding:10px;
+}
+
+#directions ol {
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+#directions li {
+    padding:10px;
+
+}
+
+aside {
+    background-color: var(--blue);
+}
+
+aside h2 {
+    text-align: center;
+    font-family:"Bebas Neue";
+    font-size:30px;
+    padding:10px;
+}
+
+aside h3 {
+    font-family:"Bebas Neue";
+    font-size:25px;
+    padding:10px;
+}
+
+aside div {
+    display: flex;
+    
+}
+
+footer img {
+    width: 150px;
+}
+
+footer {
+    list-style: none;
+    justify-items: auto;
+    padding: 10px;
+    background-color: var(--white);
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+footer li {
+    color:#EB5428;
+    font-family:"Bebas Neue";
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    padding:5px;
+}
+
+footer a {
+    color:#EB5428;
+    text-decoration: none;
+}
