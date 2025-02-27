@@ -227,6 +227,8 @@ aside img {
     padding: 15px;
 }
 
+
+
 #mexican-rice {
     display: grid;
     grid-template-columns: 3;
@@ -238,17 +240,16 @@ aside h3 {
 
 footer img {
     width: 150px;
+    padding: 20px;
 }
 
 footer {
     list-style: none;
-    justify-items: auto;
     padding: 10px;
     background-color: var(--white);
 }
 footer ul {
     display: flex;
-    justify-content: center;
 }
 footer li {
     color:#EB5428;
@@ -262,4 +263,11 @@ footer li {
 footer a {
     color:#EB5428;
     text-decoration: none;
+}
+footer small {
+    font-family: "Bebas Neue";
+    font-size: small;
+    text-align: center;
+    padding: 10px;
+}
 }
