@@ -64,6 +64,8 @@ body {
     max-width:414px;
     background-color:var(--teal);
     font-family:"Montserrat";
+    margin: 0 auto;
+    padding-top: 100px;
 }
 
 h1{
@@ -92,17 +94,20 @@ header p {
 menu {
     display: flex;
     list-style: none;
-    justify-items: auto;
     padding: 10px;
 }
 
+menu li svg {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
 menu li {
     color:#EB5428;
     font-family:"Bebas Neue";
     font-size:20px;
-    display:flex;
-    justify-content: center;
     padding:5px;
+    margin: 0 auto;
 }
 
 menu a {
@@ -110,13 +115,26 @@ menu a {
     text-decoration: none;
 }
 
-
+nav {
+    position: absolute;
+    top: 0%;
+    height: 100px;
+    z-index: 1;
+    display: flex;
+}
+nav li {
+    list-style: none;
+    padding: 10px;
+}
+#logo {
+    background-color: var(--orange);
+}
 nav h2 {
-    visibility:hidden;
+    display: none;
 }
 
-nav li {
-    visibility: hidden;
+.icons {
+    display: none;
 }
 
 form {
@@ -130,6 +148,18 @@ form {
     width:414px;
     padding-bottom:15px;
     text-align: center;
+    padding-top:100px;
+}
+form fieldset {
+    display: none;
+}
+form svg {
+    background-color: var(--orange);
+
+}
+#search {
+    border-color: var(--orange);
+    border-width: 4px;
 }
 
 #details {
@@ -237,10 +267,18 @@ aside img {
 aside h3 {
 
 }
+footer {
+    
+}
+footer h2, h3 {
+    display: none;
+}
 
 footer img {
+    display: block;
     width: 150px;
     padding: 20px;
+    margin: 20px auto;
 }
 
 footer {
@@ -251,13 +289,19 @@ footer {
 footer ul {
     display: flex;
 }
+
+footer li svg {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
 footer li {
+    list-style: none;
     color:#EB5428;
     font-family:"Bebas Neue";
     font-size:20px;
-    display:flex;
-    justify-content: center;
     padding:5px;
+    margin: 0 auto;
 }
 
 footer a {
@@ -266,8 +310,43 @@ footer a {
 }
 footer small {
     font-family: "Bebas Neue";
-    font-size: small;
+    font-size: 1em;
     text-align: center;
-    padding: 10px;
+    justify-content: center;
+    display:block;
 }
+
+footer svg {
+}
+aside div {
+    margin-left: 20px;
+}
+.rating {
+    font-weight: bold;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.rating dt, .rating dd {
+    display: none;
+
+}
+@media screen and (min-width:768px) {
+    header, main, aside, footer, nav {
+        width: 768px;
+        margin: 0 auto;
+    }
+    aside {
+        columns: 2;
+    }
+    #details dl {
+       justify-content: center;
+    }
+
+    #ingredients, #directions {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width:1280px) {
+
 }
