@@ -61,7 +61,6 @@ table {
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body {
-    max-width:414px;
     background-color:var(--teal);
     font-family:"Montserrat";
     margin: 0 auto;
@@ -83,7 +82,8 @@ header{
     
 }
 header img{
-    width:414px;
+    max-width:100%;
+    height: auto;
 }
 header p {
     padding:10px;
@@ -116,18 +116,76 @@ menu a {
 }
 
 nav {
-    position: absolute;
-    top: 0%;
-    height: 100px;
-    z-index: 1;
-    display: flex;
+    grid-area: nav;
+    min-width: 414px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px #bbb;
+    position: fixed;
+    top: 0;
+    z-index:5;
 }
+nav ul {
+    grid-area: hamberger;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+}
+nav li img {
+    display: none;
+}
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    position: relative;
+    bottom: 5px;
+    left: 30px;
+}
+nav span {
+    display: block;
+    position: relative;
+ }
+nav label svg {
+    display: block;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 550px;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+
 nav li {
     list-style: none;
-    padding: 10px;
 }
 #logo {
     background-color: var(--orange);
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 0%;
+    margin-left: auto;
+    margin-right: auto;
 }
 nav h2 {
     display: none;
@@ -138,6 +196,7 @@ nav h2 {
 }
 
 form {
+    margin-top: 20px;
     position: absolute;
     top: 0%;
     align-items: center;
@@ -157,10 +216,17 @@ form svg {
     background-color: var(--orange);
 
 }
-#search {
+#search input{
     border-color: var(--orange);
-    border-width: 4px;
+    height: 30px;
+    width: 150px;
 }
+#search button {
+    border-color: var(--orange);
+    max-width: fit-content;
+}
+
+
 
 #details {
     background-color: var(--white);
@@ -261,7 +327,6 @@ aside img {
 
 #mexican-rice {
     display: grid;
-    grid-template-columns: 3;
 }
 
 aside h3 {
@@ -331,13 +396,10 @@ aside div {
 
 }
 @media screen and (min-width:768px) {
-    header, main, aside, footer, nav {
-        width: 768px;
-        margin: 0 auto;
-    }
     aside {
         columns: 2;
     }
+
     #details dl {
        justify-content: center;
     }
@@ -349,4 +411,22 @@ aside div {
 
 @media screen and (min-width:1280px) {
 
+    #details {
+        background-color:var(--black);
+        display: flex;
+    }
+    
+    #details h2, dd, dt {
+        color:var(--blue)
+    }
+
+    #details dl {
+        display: flex;
+    }
+    #details h2 {
+        text-align: center;
+    }
+    #aside {
+        display: flex;
+    }
 }
