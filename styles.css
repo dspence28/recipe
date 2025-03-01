@@ -323,8 +323,6 @@ aside img {
     padding: 15px;
 }
 
-
-
 #mexican-rice {
     display: grid;
 }
@@ -428,5 +426,8 @@ aside div {
     }
     #aside {
         display: flex;
+    }
+    .icons {
+        display: contents;
     }
 }
